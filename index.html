@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BlackJack</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>BlackJack</h1>
+      <div class="dorso-carta"></div>
+      <div></div>
+
+      <div class="botones-croupier">
+        <p>Croupier</p>
+        <div class="marc-croupier">
+          0
+        </div>
+
+        <button id="iniciar" class="button3">Iniciar Juego</button>
+      </div>
+      <div class="tablero">
+        <div class="tabl-croupier"></div>
+        <div class="tabl-jugador"></div>
+      </div>
+      <div class="botones-jugador">
+        <p>Jugador</p>
+        <div class="marc-jugador">0</div>
+
+        <button id="pedirCarta" class="button2">
+          Pedir Carta
+        </button>
+        <button id='plantarse'>Plantarse</button>
+        <!-- <p>----</p>
+        <button class="button1">¿AS vale 1?</button> -->
+      </div>
+      <div class="display">
+        Abran juego, señores
+      </div>
+    </div>
+    <script src="libreria.js"></script>
+    <script src="baraja.js"></script>
+    <script src="blackjack.js"></script>
+  </body>
+</html>

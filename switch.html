@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+      label {
+        display: inline-block;
+        color: #b7b7b7;
+        margin: 0 5px 0 5px;
+        font-weight: bold;
+      }
+
+      .switch-bg {
+        display: inline-block;
+        width: 60px;
+        background: #d6d6d6;
+        height: 10px;
+
+        padding: 2px;
+        border-radius: 30px;
+        border: 2pt solid #b7b7b7;
+      }
+      .switch {
+        margin: -10px 0 -5px 0px;
+        background-color: #c53838;
+
+        height: 25px;
+        width: 25px;
+        border-radius: 50%;
+        border: none;
+        transition: 0.1s ease-in-out;
+        cursor: pointer;
+      }
+      .on {
+        margin: -10px 0 -5px 30px;
+        background-color: rgba(172, 255, 47, 0.897);
+        border: none;
+      }
+      
+    </style>
+  </head>
+
+  <body>
+    <div class="conmutador">
+      <label>1</label>
+      <span class="switch-bg">
+        <button
+          type="button"
+          id="conmutador"
+          value="11"
+          class="switch on"
+        ></button>
+      </span>
+      <label>11</label>
+    </div>
+    <div class="display"></div>
+
+    <script>
+      var commutador = document.getElementById("conmutador");
+      var display = document.querySelector(".display");
+      conmutador.addEventListener("click", conmutar);
+      function conmutar() {
+        if (conmutador.value === "11") {
+          console.log(conmutador.value);
+          conmutador.value = "1";
+          console.log(conmutador.value);
+          conmutador.className = "switch";
+          display.textContent = "El AS ahora vale: " + conmutador.value;
+        } else {
+          conmutador.value = "11";
+          conmutador.className = "switch on";
+          display.textContent = "El AS ahora vale: " + conmutador.value;
+        }
+
+        /*   if (conmutador.className == "switch on") {
+            conmutador.value=1;
+        
+
+          //var answer = confirm("Quieres que el As valga 1?");
+          if (conmutador.value == 1) {
+              conmutador.className = "switch";
+             display.textContent = 'El AS ahora vale: ' + conmutador.value;
+          }
+        } else {
+          //var answer = confirm("Quieres que el AS valga 11?");
+          if (conmutador.value == 11) {
+          conmutador.className = "switch on";
+              display.textContent = 'El AS ahora vale: ' + conmutador.value;
+          }
+
+        } */
+      }
+    </script>
+  </body>
+</html>
